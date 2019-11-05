@@ -15,6 +15,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_Quellspannung_editingFinished();
+
+    void on_Spannung_2_editingFinished();
+
 private:
     Ui::MainWindow *ui;
 };
