@@ -1,10 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QValidator>
-#include <QIntValidator>
 #include <QDoubleValidator>
 #include <QMessageBox>
-#include <QRegExpValidator>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -26,7 +24,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_Quellspannung_editingFinished()
 {
-    //QString nennspanung = text()bajfkskdfkasi;
+    //QString nennspanung = text();
     //int nennspannung = QLineEdit::Quellsapnnung();
     QMessageBox::information(this, tr("GEIL"), tr("ES GAHT"));
 }
