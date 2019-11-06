@@ -12,8 +12,8 @@ MainWindow::MainWindow(QWidget *parent)
     QDoubleValidator *eingabe = new QDoubleValidator(0.0,1000.0,2);
     ui->Quellspannung->setValidator(eingabe);
     ui->Spannung_2->setValidator(eingabe);
-   // int integer_value = ui->Quellspannung->text().toInt();
-
+    QPixmap pic("D:/Schule/PMSwEng/910-Projekt/Spannungsteiler/git/250px-einfacher-unbelasteter-spannungsteiler-svg_45030.png");
+    ui->label->setPixmap(pic);
 }
 
 MainWindow::~MainWindow()
@@ -24,8 +24,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_Quellspannung_editingFinished()
 {
-    //QString nennspanung = text();
-    //int nennspannung = QLineEdit::Quellsapnnung();
     QMessageBox::information(this, tr("GEIL"), tr("ES GAHT"));
 }
 
