@@ -113,7 +113,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>250px-einfacher-unbelasteter-spannungsteiler-svg_45030.png</pixmap>
+     <pixmap>spannungsteiler.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>

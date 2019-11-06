@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     QDoubleValidator *eingabe = new QDoubleValidator(0.0,1000.0,2);
     ui->Quellspannung->setValidator(eingabe);
     ui->Spannung_2->setValidator(eingabe);
-    QPixmap pic("D:/Schule/PMSwEng/910-Projekt/Spannungsteiler/git/250px-einfacher-unbelasteter-spannungsteiler-svg_45030.png");
+    QPixmap pic(":/resources/image/spannungsteiler.png");
     ui->label->setPixmap(pic);
 }
 

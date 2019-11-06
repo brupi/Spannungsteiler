@@ -31,3 +31,11 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    250px-einfacher-unbelasteter-spannungsteiler-svg_45030.png
+
+RESOURCES += \
+    spannungsteiler.qrc \
+    spannungsteiler.qrc \
+    spannungsteiler.qrc
