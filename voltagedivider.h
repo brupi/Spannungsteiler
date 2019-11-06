@@ -11,7 +11,6 @@ public:
     double getR2();
 private:
     void calculate();
-    void chooseFromE12();
     double u1;
     double u2;
     double r1;
