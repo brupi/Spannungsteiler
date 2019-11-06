@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QValidator>
 #include <QDoubleValidator>
-#include <QMessageBox>
+#include <QTextEdit>
 #include <QLineEdit>
 #include "voltagedivider.h"
 
@@ -17,8 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->Spannung_2->setValidator(eingabe);
     QPixmap pic(":/resources/image/spannungsteiler.png");
     ui->label->setPixmap(pic);
-    VoltageDivider *v = new VoltageDivider();
-
+    ui->out_r1->setText("");
 }
 
 MainWindow::~MainWindow()
@@ -29,12 +28,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_Quellspannung_editingFinished()
 {
-    QString XMAX = ui->Quellspannung->text();
-    double voltage_1=XMAX.toDouble();
+    QString input_voltage = ui->Quellspannung->text();
+    double voltage_1 = input_voltage.toDouble();
     v->setU1(voltage_1);
 }
 
 void MainWindow::on_Spannung_2_editingFinished()
 {
-
+    QString input_voltage = ui->Quellspannung->text();
+    double voltage_2 = input_voltage.toDouble();
+    v->setU2(voltage_2);
 }
