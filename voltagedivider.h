@@ -4,7 +4,7 @@
 class VoltageDivider
 {
 public:
-    VoltageDivider(double u1, double u2, double r1);
+    VoltageDivider(double u1 = 1, double u2 = 1);
     void setU1(double u1);
     void setU2(double u2);
     double getR1();
