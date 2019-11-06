@@ -17,10 +17,9 @@ void VoltageDivider::setU2(double u2)
     calculate();
 }
 
-void VoltageDivider::setR1(double r1)
+double VoltageDivider::getR1()
 {
-    this->r1 = r1;
-    calculate();
+    return r1;
 }
 
 double VoltageDivider::getR2()
