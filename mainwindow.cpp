@@ -29,14 +29,28 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_Quellspannung_editingFinished()
 {
-    VD->setU1(ui->Quellspannung->text().toDouble());
-    ui->out_r1->setText(QString::number(VD->getR1()));
-    ui->out_r2->setText(QString::number(VD->getR2()));
+    double value = ui->Quellspannung->text().toDouble();
+    // u1 must be higher or the same as u2
+    if(value >= VD->getU2())
+    {
+        VD->setU1(value);
+        ui->out_r1->setText(QString::number(VD->getR1()));
+        ui->out_r2->setText(QString::number(VD->getR2()));
+    }else{
+        ui->Quellspannung->setText(QString::number(VD->getU1()));
+    }
 }
 
 void MainWindow::on_Spannung_2_editingFinished()
 {
-    VD->setU2(ui->Spannung_2->text().toDouble());
-    ui->out_r1->setText(QString::number(VD->getR1()));
-    ui->out_r2->setText(QString::number(VD->getR2()));
+    double value = ui->Spannung_2->text().toDouble();
+    // u1 must be higher or the same as u2
+    if(value <= VD->getU1())
+    {
+        VD->setU2(value);
+        ui->out_r1->setText(QString::number(VD->getR1()));
+        ui->out_r2->setText(QString::number(VD->getR2()));
+    }else{
+        ui->Spannung_2->setText(QString::number(VD->getU2()));
+    }
 }

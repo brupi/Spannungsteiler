@@ -18,6 +18,16 @@ void VoltageDivider::setU2(double u2)
     calculate();
 }
 
+double VoltageDivider::getU1()
+{
+    return u1;
+}
+
+double VoltageDivider::getU2()
+{
+    return u2;
+}
+
 double VoltageDivider::getR1()
 {
     return r1;
