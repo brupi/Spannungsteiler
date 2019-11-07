@@ -19,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     QPixmap pic(":/resources/image/spannungsteiler.png");
     ui->label->setPixmap(pic);
 
-    // setup values
+    // setup valuessss
     ui->Quellspannung->setText(QString::number(10));
     ui->Spannung_2->setText(QString::number(1));
     VD = new VoltageDivider(10, 1);
