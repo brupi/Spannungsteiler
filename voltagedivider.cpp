@@ -2,7 +2,7 @@
 #include "math.h"
 
 VoltageDivider::VoltageDivider(double u1, double u2) :
-    u1(u1), u2(u2), r1(1), r2(1)
+    u1(u1), u2(u2)
 {
     calculate();
 }
