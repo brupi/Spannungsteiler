@@ -11,7 +11,6 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
-    , VD(new VoltageDivider())
 {
     ui->setupUi(this);
     QDoubleValidator *input_validator = new QDoubleValidator(0.0,1000.0,2);
@@ -19,6 +18,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->Spannung_2->setValidator(input_validator);
     QPixmap pic(":/resources/image/spannungsteiler.png");
     ui->label->setPixmap(pic);
+
+    // setup values
+    ui->Quellspannung->setText(QString::number(10));
+    ui->Spannung_2->setText(QString::number(1));
+    VD = new VoltageDivider(10, 1);
+    on_Quellspannung_editingFinished();
+    on_Spannung_2_editingFinished();
 }
 
 MainWindow::~MainWindow()

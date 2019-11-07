@@ -4,6 +4,7 @@
 VoltageDivider::VoltageDivider(double u1, double u2) :
     u1(u1), u2(u2), r1(1), r2(1)
 {
+    calculate();
 }
 
 void VoltageDivider::setU1(double u1)
