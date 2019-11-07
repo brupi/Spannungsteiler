@@ -4,12 +4,14 @@
 #include <QDoubleValidator>
 #include <QTextEdit>
 #include <QLineEdit>
+#include <QString>
 #include "voltagedivider.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    , VD(new VoltageDivider())
 {
     ui->setupUi(this);
     QDoubleValidator *eingabe = new QDoubleValidator(0.0,1000.0,2);
@@ -28,14 +30,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_Quellspannung_editingFinished()
 {
-    QString input_voltage = ui->Quellspannung->text();
-    double voltage_1 = input_voltage.toDouble();
-    v->setU1(voltage_1);
+    VD->setU1(ui->Quellspannung->text().toDouble());
+    ui->out_r1->setText(QString::number(VD->getR1()));
+    ui->out_r2->setText(QString::number(VD->getR2()));
 }
 
 void MainWindow::on_Spannung_2_editingFinished()
 {
-    QString input_voltage = ui->Quellspannung->text();
-    double voltage_2 = input_voltage.toDouble();
-    v->setU2(voltage_2);
+    VD->setU2(ui->Spannung_2->text().toDouble());
+    ui->out_r1->setText(QString::number(VD->getR1()));
+    ui->out_r2->setText(QString::number(VD->getR2()));
 }

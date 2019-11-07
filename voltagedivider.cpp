@@ -31,11 +31,10 @@ double VoltageDivider::getR2()
 void VoltageDivider::calculate()
 {
     double e12[12] = {1.0, 1.2, 1.5, 1.8, 2.2, 2.7, 3.3, 3.9, 4.7, 5.6, 6.8, 8.2}; // chooses from array
-    //double ratio = u1/u2;
 
     for(int i=0 ; i<12 ; ++i){
         for(int j=0 ; j<12 ; ++j){
-            if(abs((e12[i]/e12[j])-(u1/u2)) < abs((r1/r2)-(u1/u2)))
+            if(abs(((e12[i]+e12[j])/e12[j])-(u1/u2)) < abs(((r1+r2)/r2)-(u1/u2)))
             {
                 r1 = e12[i];
                 r2 = e12[j];

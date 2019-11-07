@@ -14,20 +14,15 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    VoltageDivider *v = new VoltageDivider();
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
     void on_Quellspannung_editingFinished();
-
     void on_Spannung_2_editingFinished();
-
-    void on_textBrowser_anchorClicked(const QUrl &arg1);
-
-    void on_out_r1_textChanged();
 
 private:
     Ui::MainWindow *ui;
+    VoltageDivider *VD;
 };
 #endif // MAINWINDOW_H
