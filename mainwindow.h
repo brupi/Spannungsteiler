@@ -23,6 +23,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    VoltageDivider *VD;
+    VoltageDivider VD;
 };
 #endif // MAINWINDOW_H

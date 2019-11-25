@@ -22,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
     // setup values
     ui->Quellspannung->setText(QString::number(10));
     ui->Spannung_2->setText(QString::number(1));
-    VD = new VoltageDivider(10, 1);
+    VD = VoltageDivider(10, 1);
     on_Quellspannung_editingFinished();
     on_Spannung_2_editingFinished();
 }
@@ -37,13 +37,13 @@ void MainWindow::on_Quellspannung_editingFinished()
 {
     double value = ui->Quellspannung->text().toDouble();
     // u1 must be higher or the same as u2
-    if(value >= VD->getU2())
+    if(value >= VD.getU2())
     {
-        VD->setU1(value);
-        ui->out_r1->setText(QString::number(VD->getR1()));
-        ui->out_r2->setText(QString::number(VD->getR2()));
+        VD.setU1(value);
+        ui->out_r1->setText(QString::number(VD.getR1()));
+        ui->out_r2->setText(QString::number(VD.getR2()));
     }else{
-        ui->Quellspannung->setText(QString::number(VD->getU1()));
+        ui->Quellspannung->setText(QString::number(VD.getU1()));
     }
 }
 
@@ -51,12 +51,12 @@ void MainWindow::on_Spannung_2_editingFinished()
 {
     double value = ui->Spannung_2->text().toDouble();
     // u1 must be higher or the same as u2
-    if(value <= VD->getU1())
+    if(value <= VD.getU1())
     {
-        VD->setU2(value);
-        ui->out_r1->setText(QString::number(VD->getR1()));
-        ui->out_r2->setText(QString::number(VD->getR2()));
+        VD.setU2(value);
+        ui->out_r1->setText(QString::number(VD.getR1()));
+        ui->out_r2->setText(QString::number(VD.getR2()));
     }else{
-        ui->Spannung_2->setText(QString::number(VD->getU2()));
+        ui->Spannung_2->setText(QString::number(VD.getU2()));
     }
 }
