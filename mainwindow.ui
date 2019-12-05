@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>539</width>
-    <height>493</height>
+    <width>555</width>
+    <height>519</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -316,6 +316,27 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>440</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>U must be higher than U2</string>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>Spannung_2</zorder>
    <zorder>Quellspannung</zorder>
@@ -325,14 +346,15 @@
    <zorder>label_5</zorder>
    <zorder>out_r1</zorder>
    <zorder>out_r2</zorder>
+   <zorder>label_6</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>539</width>
-     <height>26</height>
+     <width>555</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>
