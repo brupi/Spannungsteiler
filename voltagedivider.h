@@ -19,19 +19,19 @@ class VoltageDivider
   void setU2(double u2);
 
   /// \brief gets the parameter u1
-  /// \param u1 input voltage
+  /// \return double input voltage
   double getU1();
 
   /// \brief gets the parameter u2
-  /// \param u2 output voltage
+  /// \return double output voltage
   double getU2();
 
   /// \brief gets the parameter R1
-  /// \param R1 upper resistor
+  /// \return double upper resistor
   double getR1();
 
   /// \brief gets the parameter R2
-  /// \param R2 lower resistor
+  /// \return double lower resistor
   double getR2();
 
  private:

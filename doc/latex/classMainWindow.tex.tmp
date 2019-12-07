@@ -8,8 +8,8 @@ Inheritance diagram for Main\+Window\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classMainWindow_a996c5a2b6f77944776856f08ec30858d}\label{classMainWindow_a996c5a2b6f77944776856f08ec30858d}} 
-{\bfseries Main\+Window} (Q\+Widget $\ast$parent=nullptr)
-\end{DoxyCompactItemize}
+\hyperlink{classMainWindow_a996c5a2b6f77944776856f08ec30858d}{Main\+Window} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em creates \hyperlink{classMainWindow}{Main\+Window} \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

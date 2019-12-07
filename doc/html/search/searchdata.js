@@ -2,7 +2,7 @@ var indexSectionsWithContent =
 {
   0: "gmsv",
   1: "mv",
-  2: "gsv",
+  2: "gmsv",
   3: "s"
 };
 
