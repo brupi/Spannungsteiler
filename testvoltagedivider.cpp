@@ -34,7 +34,11 @@ int main()
   double y;
 
   VoltageDivider TestClass;
-
+  
+  x = TestClass.setU1(Eingangsspannung[2]);
+  cout << x << endl;
+  
+ /*
   int z = 14;
   for (z = 0; z <= 12; z++)
   {
@@ -46,6 +50,7 @@ int main()
     cout << "Eingang: " << Eingangsspannung[z] << "||" << "Ausgang: "
          << Ausgangsspannung[z] << endl;
   }
+  */
   return 0;
 }
 
