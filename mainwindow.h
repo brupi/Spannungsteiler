@@ -11,13 +11,14 @@ namespace Ui
 class MainWindow;
 }
 QT_END_NAMESPACE
-
+/// \brief class for MainWindow
 class MainWindow : public QMainWindow
 {
   Q_OBJECT
 
  public:
   /// \brief creates MainWindow
+  /// \param parent pointer
   MainWindow(QWidget* parent = nullptr);
   ~MainWindow();
 

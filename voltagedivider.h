@@ -1,6 +1,7 @@
 #ifndef VOLTAGEDIVIDER_H
 #define VOLTAGEDIVIDER_H
 
+/// \brief class VoltageDivider to calculate the voltage divider
 class VoltageDivider
 {
  public:
