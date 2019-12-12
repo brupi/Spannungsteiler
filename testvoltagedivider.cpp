@@ -21,16 +21,14 @@ using namespace std;
 
 int main()
 {
-  double Eingangsspannung[] = {3, 4.5, 2.2, 5.6};
-  double Ausgangsspannung[] = {2.043478261, 1.607142857, 0.9075, 2.94566474};
-  double R1[] = {560, 180, 470, 820};
-  double R2[] = {1200, 100, 330, 1000};
+  double Eingangsspannung[] = {3, 4.5, 2.2};
+  double Ausgangsspannung[] = {2.043478261, 1.607142857, 0.9075};
+  double R1[] = {560, 180, 470};
+  double R2[] = {1200, 100, 330};
   double x;
   double y;
-
-  VoltageDivider TestClass;
-
   int z = 0;
+  VoltageDivider TestClass;
   for (z = 0; z <= 2; z++)
   {
     TestClass.setU1(Eingangsspannung[z]);
@@ -41,7 +39,6 @@ int main()
     assert(R2[z] == y);
   }
   cout << "Test successful!" << endl;
-
   return 0;
 }
 
